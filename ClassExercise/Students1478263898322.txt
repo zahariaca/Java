@@ -1,0 +1,6 @@
+--------------Student{firstName='Alex', lastName='ZAHARIA', CNP='1911216211188', age=24', class=A', address=Address{country='Romania', city='Bucharest', streetName='Gheorghe Sincai', zipcode=920073}}
+--------------Student{firstName='Alex', lastName='ZAHARIA', CNP='1911216211188', age=24', class=A', address=Address{country='Romania', city='Bucharest', streetName='Gheorghe Sincai', zipcode=920073}}
+--------------Student{firstName='Andrei', lastName='POPESCU', CNP='1911216211187', age=24', class=B', address=Address{country='Romania', city='Bucharest', streetName='Gheorghe Sincai', zipcode=920073}}
+--------------Student{firstName='Andreea', lastName='POPESCU', CNP='2911216211187', age=22', class=B', address=Address{country='Romania', city='Bucharest', streetName='Gheorghe Sincai', zipcode=920073}}
+--------------Student{firstName='Alexa', lastName='ZAHARIA', CNP='2911216211188', age=25', class=C', address=Address{country='Romania', city='Bucharest', streetName='Gheorghe Sincai', zipcode=920073}}
+--------------Student{firstName='Andreea', lastName='ZAHARIA', CNP='2911216211188', age=34', class=C', address=Address{country='Romania', city='Bucharest', streetName='Gheorghe Sincai', zipcode=920073}}
