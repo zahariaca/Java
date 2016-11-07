@@ -1,0 +1,19 @@
+<?xml version="1.0"?>
+<properties>
+    <property>
+        <name>prop1</name>
+        <value>value1</value>
+    </property>
+    <property>
+        <name>prop2</name>
+        <value>value2</value>
+    </property>
+    <property>
+        <name>prop3</name>
+        <value>value3</value>
+    </property>
+    <property>
+        <name>prop4</name>
+        <value>value4</value>
+    </property>
+</properties>
