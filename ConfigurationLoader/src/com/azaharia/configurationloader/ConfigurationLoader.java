@@ -30,11 +30,12 @@ public class ConfigurationLoader {
 
     }
 
-    public String getProperty(String propName){
+    public Object getProperty(String propName){
         if(System.getProperty(propName) != null){
-            return System.getProperty(propName);
+            return (String) System.getProperty(propName);
         }
-        return configMap.get(propName);
+            return (String) configMap.get(propName);
+
     }
 
     private static void parseXml(){

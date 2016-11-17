@@ -16,8 +16,4 @@
         <name>prop4</name>
         <value>value4</value>
     </property>
-    <property>
-        <name>prop5</name>
-        <value>1000</value>
-    </property>
 </properties>
