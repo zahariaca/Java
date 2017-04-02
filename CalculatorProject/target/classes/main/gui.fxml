@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.TextArea?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.RowConstraints?>
+<?import javafx.scene.layout.StackPane?>
+<?import javafx.scene.text.Font?>
+
+<GridPane alignment="center" minHeight="250.0" minWidth="200.0" prefHeight="350.0" prefWidth="300.0" xmlns="http://javafx.com/javafx/8.0.91" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.zahariaca.calculator.CalculatorController">
+
+
+    <children>
+        <Button fx:id="btnC" onKeyPressed="#keyPressed" onMouseClicked="#mouseClicked" prefHeight="75.0" prefWidth="75.0" text="C" textFill="#1966f5" GridPane.rowIndex="2" />
+        <Button fx:id="btnDivide" onKeyPressed="#keyPressed" onMouseClicked="#mouseClicked" prefHeight="75.0" prefWidth="75.0" text="/" textFill="#1966f5" GridPane.columnIndex="1" GridPane.rowIndex="2" />
+        <Button fx:id="btnDel" layoutX="73.0" layoutY="21.0" mnemonicParsing="false" onKeyPressed="#keyPressed" onMouseClicked="#mouseClicked" prefHeight="75.0" prefWidth="75.0" text="DEL" textFill="#1966f5" GridPane.columnIndex="3" GridPane.rowIndex="2" />
+        <Button fx:id="btnMultiply" layoutX="137.0" layoutY="72.0" mnemonicParsing="false" onKeyPressed="#keyPressed" onMouseClicked="#mouseClicked" prefHeight="75.0" prefWidth="75.0" text="X" textFill="#1966f5" GridPane.columnIndex="2" GridPane.rowIndex="2" />
+        <Button fx:id="btnSeven" onKeyPressed="#keyPressed" onMouseClicked="#mouseClicked" prefHeight="75.0" prefWidth="75.0" text="7" GridPane.rowIndex="3" />
+        <Button fx:id="btnEight" onKeyPressed="#keyPressed" onMouseClicked="#mouseClicked" prefHeight="75.0" prefWidth="75.0" text="8" GridPane.columnIndex="1" GridPane.rowIndex="3" />
+        <Button fx:id="btnNine" onKeyPressed="#keyPressed" onMouseClicked="#mouseClicked" prefHeight="75.0" prefWidth="75.0" text="9" GridPane.columnIndex="2" GridPane.rowIndex="3" />
+        <Button fx:id="btnSubtract" onKeyPressed="#keyPressed" onMouseClicked="#mouseClicked" prefHeight="75.0" prefWidth="75.0" text="-" textFill="#1966f5" GridPane.columnIndex="3" GridPane.rowIndex="3" />
+        <Button fx:id="btnFour" onKeyPressed="#keyPressed" onMouseClicked="#mouseClicked" prefHeight="75.0" prefWidth="75.0" text="4" GridPane.rowIndex="4" />
+        <Button fx:id="btnFive" onKeyPressed="#keyPressed" onMouseClicked="#mouseClicked" prefHeight="75.0" prefWidth="75.0" text="5" GridPane.columnIndex="1" GridPane.rowIndex="4" />
+        <Button fx:id="btnSix" onKeyPressed="#keyPressed" onMouseClicked="#mouseClicked" prefHeight="75.0" prefWidth="75.0" text="6" GridPane.columnIndex="2" GridPane.rowIndex="4" />
+        <Button fx:id="btnAdd" onKeyPressed="#keyPressed" onMouseClicked="#mouseClicked" prefHeight="75.0" prefWidth="75.0" text="+" textFill="#1966f5" GridPane.columnIndex="3" GridPane.rowIndex="4" />
+        <Button fx:id="btnOne" onKeyPressed="#keyPressed" onMouseClicked="#mouseClicked" prefHeight="75.0" prefWidth="75.0" text="1" GridPane.rowIndex="5" />
+        <Button fx:id="btnTwo" onKeyPressed="#keyPressed" onMouseClicked="#mouseClicked" prefHeight="75.0" prefWidth="75.0" text="2" GridPane.columnIndex="1" GridPane.rowIndex="5" />
+        <Button fx:id="btnThree" onKeyPressed="#keyPressed" onMouseClicked="#mouseClicked" prefHeight="75.0" prefWidth="75.0" text="3" GridPane.columnIndex="2" GridPane.rowIndex="5" />
+        <Button fx:id="btnParanthesis" onKeyPressed="#keyPressed" onMouseClicked="#mouseClicked" prefHeight="75.0" prefWidth="75.0" text="( )" textFill="#1966f5" GridPane.columnIndex="3" GridPane.rowIndex="5" />
+        <Button fx:id="btnZero" onKeyPressed="#keyPressed" onMouseClicked="#mouseClicked" prefHeight="75.0" prefWidth="180.0" text="0" GridPane.columnSpan="2" GridPane.rowIndex="6" />
+        <Button fx:id="btnPeriod" onKeyPressed="#keyPressed" onMouseClicked="#mouseClicked" prefHeight="75.0" prefWidth="75.0" text="." GridPane.columnIndex="2" GridPane.rowIndex="6" />
+        <Button fx:id="btnEquals" onKeyPressed="#keyPressed" onMouseClicked="#mouseClicked" prefHeight="75.0" prefWidth="75.0" text="=" textFill="#24ab36" GridPane.columnIndex="3" GridPane.rowIndex="6" />
+      <StackPane GridPane.columnSpan="4" GridPane.rowSpan="2">
+         <children>
+              <TextArea fx:id="textArea" accessibleRole="TEXT" editable="false" prefHeight="75.0">
+               <font>
+                  <Font size="18.0" />
+               </font>
+            </TextArea>
+            <Button fx:id="backBtn" mnemonicParsing="false" onAction="#handleBackButton" text="Back" translateX="120.0" translateY="-40.0" />
+         </children>
+      </StackPane>
+    </children>
+</GridPane>

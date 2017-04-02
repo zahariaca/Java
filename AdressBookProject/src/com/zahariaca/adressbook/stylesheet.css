@@ -1,0 +1,39 @@
+.background{
+    -fx-background-color:#1d1d1d;
+}
+.menu-bar {
+    -fx-background-color: derive(#1d1d1d,20%);
+    -fx-selection-bar: derive(-fx-background,-7%);
+    -fx-effect: dropshadow( gaussian , #ffffff , 0,0,0,1 );
+}
+.menu-bar .label {
+    -fx-font-size: 14pt;
+    -fx-font-family: "Segoe UI Light";
+    -fx-text-fill: white;
+    -fx-opacity: 0.9;
+}
+
+.split-pane {
+    -fx-skin: "com.sun.javafx.scene.control.skin.SplitPaneSkin";
+    -fx-background-color: #1d1d1d;
+    -fx-background-insets: 0, 1;
+    -fx-padding: 1;
+}
+.split-pane:vertical > * > .split-pane-divider {
+   -fx-border-color:   transparent -fx-box-border transparent;
+   -fx-background-color: transparent, -fx-inner-border;
+   -fx-background-insets: 0, 1 0 1 0;
+}
+.split-pane-divider {
+   -fx-background-color: white transparent;
+}
+.button{
+    -fx-background-color: #1d1d1d;
+    -fx-text-fill: white;
+    -fx-font-size: 14px;
+}
+.label{
+    -fx-text-fill: white;
+    -fx-font-size: 24px;
+    -fx-underline: true;
+}

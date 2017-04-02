@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Menu?>
+<?import javafx.scene.control.MenuBar?>
+<?import javafx.scene.control.MenuItem?>
+<?import javafx.scene.control.RadioButton?>
+<?import javafx.scene.control.Slider?>
+<?import javafx.scene.control.TextArea?>
+<?import javafx.scene.layout.BorderPane?>
+
+<BorderPane prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/8.0.91" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sample.Controller">
+   <top>
+      <MenuBar BorderPane.alignment="CENTER">
+          <Menu mnemonicParsing="false" text="File">
+            <items>
+              <MenuItem onAction="#handleOpen" text="Open" />
+              <MenuItem onAction="#handleSave" text="Save" />
+              <MenuItem text="Close" />
+            </items>
+          </Menu>
+          <Menu text="Edit">
+              <MenuItem text="Delete" />
+          </Menu>
+            <Menu text="View">
+                  <MenuItem text="Delete" />
+            </Menu>
+          <Menu text="Help">
+              <MenuItem text="About" />
+          </Menu>
+      </MenuBar>
+   </top>
+    <center>
+        <TextArea id="textArea" fx:id="textArea" prefHeight="200.0" prefWidth="200.0" wrapText="true" BorderPane.alignment="CENTER" />
+    </center>
+</BorderPane>
