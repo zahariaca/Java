@@ -1,0 +1,5 @@
+projectKey=com.zahariaca.gui:CalculatorProject
+serverUrl=http://192.168.99.100:9000
+dashboardUrl=http://192.168.99.100:9000/dashboard/index/com.zahariaca.gui:CalculatorProject
+ceTaskId=AVwbnAHJBHA7be8wDL49
+ceTaskUrl=http://192.168.99.100:9000/api/ce/task?id=AVwbnAHJBHA7be8wDL49
