@@ -3,7 +3,7 @@ package com.zahariaca.arithmetic;
 public class Main {
 
     public static void main(String[] args) {
-        //TODO  
+        //TODO  test
         Main main = new Main();
         main.checkNrOfArgs(args);
         main.checkIfNr(args);
