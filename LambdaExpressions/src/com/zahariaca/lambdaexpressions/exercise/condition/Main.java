@@ -1,27 +1,25 @@
-package com.zahariaca.lambdaexpressions.exercise;
+package com.zahariaca.lambdaexpressions.exercise.condition;
 
 import java.util.Arrays;
 import java.util.Collections;
 import java.util.Comparator;
 import java.util.List;
 import java.util.concurrent.locks.Condition;
+import java.util.function.Predicate;
+
+import com.zahariaca.lambdaexpressions.exercise.Person;
 
 /**
  * Created by Zaharia Costin-Alexandru, email: zaharia.c.alexandru@gmail.com on 6/19/2017.
  */
 public class Main {
     public static void main(String[] args) {
-        List<Person> people = Arrays.asList(
-                    new Person("Alex", "Zaharia", 25),
-                    new Person("Andrei", "Popescu", 50),
-                    new Person("Gigel", "Gheorghe", 55),
-                    new Person("Marina", "Suiu", 40),
-                    new Person("Andreea", "Dragomir", 35)
-        );
+        List<Person> people = Arrays.asList(new Person("Alex", "Zaharia", 25), new Person("Andrei", "Popescu", 50),
+                new Person("Gigel", "Gheorghe", 55), new Person("Marina", "Suiu", 40), new Person("Andreea", "Dragomir", 35));
 
         // Step 1: sort list by last name
 
-            // Solution in Java 7
+        // Solution in Java 7
         Collections.sort(people, new Comparator<Person>() {
             @Override
             public int compare(Person o1, Person o2) {
@@ -29,22 +27,22 @@ public class Main {
             }
         });
 
-            // Solution in Java 8
-        Collections.sort(people, (o1,o2) -> o1.getLastName().compareTo(o2.getLastName()));
+        // Solution in Java 8
+        Collections.sort(people, (o1, o2) -> o1.getLastName().compareTo(o2.getLastName()));
 
         // Step 2: create a method that prints all elements in list
 
-            // Solution in Java 7
+        // Solution in Java 7
         System.out.println("Printing out all peoplem java 7 method");
         printAll(people);
 
-            // Solution in Java 8
+        // Solution in Java 8
         System.out.println("\nPrinting out all peoplem java 8 method");
         printConditionally(people, p -> true);
 
         // Step 3: create a method that prints all people that have last name beginning with Z
 
-            // Solution in Java 7
+        // Solution in Java 7
         System.out.println("\nPrinting out all people with last name beginning with Z, java 7 method");
         printConditionally(people, new Condition() {
             @Override
@@ -52,11 +50,15 @@ public class Main {
                 return p.getLastName().startsWith("Z");
             }
         });
-            // Solution in Java 8
+        // Solution in Java 8
         System.out.println("\nPrinting out all people with last name beginning with Z, java 8 method (lambda)");
         printConditionally(people, p -> p.getLastName().startsWith("Z"));
+
+        System.out.println("\nPrinting out all people java 8 method using the Predicate<T> interface");
+        printPredicate(people, p -> true);
     }
 
+    // Printing using one of our own functional interfaces called Condition
     private static void printConditionally(List<Person> people, Condition condition) {
         for (Person p : people){
             if(condition.test(p)) {
@@ -68,6 +70,15 @@ public class Main {
     private static void printAll(List<Person> people){
         for (Person p : people){
             System.out.println(p);
+        }
+    }
+
+    // Printing using the Predicate<T> interface instead of an interface declared by me
+    private static void printPredicate(List<Person> people, Predicate<Person> predicate){
+        for( Person p : people){
+            if(predicate.test(p)){
+                System.out.println(p);
+            }
         }
     }
 
