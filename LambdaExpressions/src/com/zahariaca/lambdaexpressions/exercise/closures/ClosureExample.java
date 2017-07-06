@@ -6,7 +6,7 @@ package com.zahariaca.lambdaexpressions.exercise.closures;
 public class ClosureExample {
     public static void main(String[] args) {
         int a = 10;
-        int b = 20; //effectively final
+        int b = 20; // effectively final
 
         doProcess(a, (i) -> {
             // b = 30; changing the value is not allowed here.

@@ -14,8 +14,12 @@ import com.zahariaca.lambdaexpressions.exercise.Person;
  */
 public class Main {
     public static void main(String[] args) {
-        List<Person> people = Arrays.asList(new Person("Alex", "Zaharia", 25), new Person("Andrei", "Popescu", 50),
-                new Person("Gigel", "Gheorghe", 55), new Person("Marina", "Suiu", 40), new Person("Andreea", "Dragomir", 35));
+        List<Person> people = Arrays.asList(new Person("Alex", "Zaharia", 25),
+                new Person("Andrei", "Popescu", 50),
+                new Person("Gigel", "Gheorghe", 55),
+                new Person("Marina", "Suiu", 40),
+                new Person("Andreea", "Dragomir", 35)
+        );
 
         // Step 1: sort list by last name
 
