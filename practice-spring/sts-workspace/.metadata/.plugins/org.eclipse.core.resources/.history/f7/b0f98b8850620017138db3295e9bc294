@@ -1,0 +1,5 @@
+package com.zahariaca.springboot.starter.hello;
+
+public class HelloController {
+
+}

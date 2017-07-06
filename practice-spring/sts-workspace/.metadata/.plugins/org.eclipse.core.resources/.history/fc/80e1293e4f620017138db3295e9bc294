@@ -1,0 +1,15 @@
+package com.zahariaca.springboot.starter;
+
+import org.springframework.boot.SpringApplication;
+import org.springframework.boot.autoconfigure.SpringBootApplication;
+
+@SpringBootApplicationplication
+public class CourseAPIApp {
+
+	public static void main(String[] args) {
+		
+		SpringApplication.run(source, args);
+
+	}
+
+}

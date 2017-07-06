@@ -1,0 +1,5 @@
+package com.zahariaca.springboot.starter.topic;
+
+public class Topic {
+
+}

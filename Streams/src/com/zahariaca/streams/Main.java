@@ -7,7 +7,8 @@ import java.util.stream.Stream;
 public class Main {
 
     public static void main(String[] args) {
-        List<Person> people = Arrays.asList(new Person("Alex", "Zaharia", 25),
+        List<Person> people = Arrays.asList(
+                new Person("Alex", "Zaharia", 25),
                 new Person("Andrei", "Popescu", 50),
                 new Person("Gigel", "Gheorghe", 55),
                 new Person("Marina", "Suiu", 40),
