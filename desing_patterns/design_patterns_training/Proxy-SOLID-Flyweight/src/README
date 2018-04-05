@@ -1,0 +1,36 @@
+Proxy Pattern
+
+Descriere
+Este un pattern in cadrul caruia o clasa este folosita ca o interfata catre alte clase.
+In cazul nostru, solutia este un framework ce se comporta ca un proxy intre environmentul de testare si simulatoarele functionale din spate.
+
+
+Problema
+Controlarea accesul la un obiect/ Necesitatea verificarii drepturilor de acces pe care le au clientii (pentru anumite obiecte)/ Pastrarea compatibilitatii cu modificari la nivelul de jos 
+Problema concreta: Foarte multe simulatoare independente ce ar fi trebuit controlate individual de client (testeri)
+
+Solutia
+O clasa speciala pentru client care ofera functionalitatile de control catre celelalte componente.
+
+O interfata unica ce ofera metode generale de configurare care apeleaza in spate simulatoarele specifice. Clientul (userul) trebuie sa interactioneze doar cu aceasta, fara a se procupa de implementarea din spate. Permite schimbarea unui simulator fara a afecta utilizarea obisnuita.
+
+
+Proxy UML
+
+Sistem
+
+Strategii de implementare
+Remote proxy
+Obiectul local este un proxy pentru un obiect remote si apeleaza metode pe obiectul remote
+Virtual proxy
+	Proxy-ul virtual este folosit in      locul unui obiect complex pentru a reduce incarcarea
+Protection Proxy
+	Proxy-ul mai poate fi folosit si pentru a controla accesul la resurse pe baza unor drepturi (proxy-ul acceseaza o anumita metoda doar daca clientul are drept sa o acceseze)
+
+
+Dezavantaje/nuante
+Cons: Adauga un layer de complexitate in plus, Delay la raspuns
+
+
+Nuante: Asemanare cu adapter ce ofera o interfata diferita. Proxy ofera aceasi interfata.  Decorator ofera o interfata imbunatatita.
+

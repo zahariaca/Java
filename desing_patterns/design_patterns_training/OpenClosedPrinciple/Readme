@@ -1,0 +1,8 @@
+Open/Closed Principle:
+	Classes (or methods) should be open for extension and closed for modification.
+	Once written they should only be touched to fix errors. New functionality should
+	go into new classes that are derived. This is popularly interpreted to advocate
+	inheriting from an abstract base class.
+	Reasoning: Again you lower the odds of breaking existing code.
+	
+Link: http://joelabrahamsson.com/a-simple-example-of-the-openclosed-principle/
