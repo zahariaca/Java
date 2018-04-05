@@ -1,0 +1,9 @@
+---
+Facade
+---
+- Clientul are doar punctul de apelare al unei metode
+- In niciun caz nu pregateste terenul ptr obtinerea rezultatului dorit
+- See just the tip of the iceberg; not the botom of one
+- E.g: apeluri de  metode dintr-o librarie
+     : gateway de bussiness logic (JEE, multiple servicii are unei aplicatii enterprise,)
+- Dezavantaj: layer in plus care nu este necesar uneori, dar avantajele depasesc acest mic neajuns
