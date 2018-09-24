@@ -1,7 +1,9 @@
 package com.zahariaca.streams;
 
 import java.util.Arrays;
+import java.util.HashMap;
 import java.util.List;
+import java.util.Map;
 import java.util.stream.Stream;
 
 public class Main {
@@ -23,29 +25,35 @@ public class Main {
                 .forEach(p -> System.out.println(p.getFirstName()));
 
         long count = people.stream()
-                .filter(p->p.getLastName().startsWith("Z"))
+                .filter(p -> p.getLastName().startsWith("Z"))
                 .count();
         System.out.println("the count: " + count);
 
         people.parallelStream()
-                .filter(p->p.getLastName().startsWith("Z"))
+                .filter(p -> p.getLastName().startsWith("Z"))
                 .forEach(System.out::println);
 
 
-        String test = "";
-        String[] elements = test.split(" ");
-        for (String s : elements) {
-            System.out.println(s);
-        }
-        for(int i = 0; i < elements.length; i++){
-            elements[i] = elements[i].substring(0,1).toUpperCase() + elements[i].substring(1);
-        }
+        int[] integerArray = {1, 3, 4, 6, 8, 12, 14, 25, 28};
 
-        String result = "";
-        for(String s : elements){
-            result += s;
-        }
+        Arrays.stream(integerArray)
+                .filter(i -> i % 2 == 0)
+                .forEach(System.out::println);
 
-        System.out.println(result);
+        int result = Arrays.stream(integerArray)
+                .filter(i -> i % 2 == 0)
+                .sum();
+
+        System.out.println("Result:  " + result);
+
+
+        Map<String, Integer> integers = new HashMap<>();
+
+        integers.values()
+                .stream()
+                .mapToInt(i -> i.intValue())
+                .filter(i -> i % 2 == 0)
+                .forEach(System.out::println);
+
     }
 }
