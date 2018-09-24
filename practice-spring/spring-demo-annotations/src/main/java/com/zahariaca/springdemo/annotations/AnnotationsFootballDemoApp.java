@@ -16,6 +16,8 @@ public class AnnotationsFootballDemoApp {
         System.out.println("Is this the same object? " + (myFootballCoach == anotherFootballCoach));
         System.out.println("myFootballCoach hashCode: " + myFootballCoach.hashCode());
         System.out.println("anotherFootballCoach hashCode: " + anotherFootballCoach.hashCode());
+        System.out.println(myFootballCoach.getDailyWorkout());
+        System.out.println(myFootballCoach.getDailyFortune());
 
         // close context
         context.close();
