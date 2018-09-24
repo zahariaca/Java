@@ -1,0 +1,17 @@
+FlyWeight design pattern.
+
+Folosit pentru a reduce memoria folosita de aplicatie.
+In loc sa se faca N obiecte de M tipuri diferite se vor face doar M obiecte.
+Atunci cand se doreste accesarea celor N obiecte au loc urmatoarele:
+	- daca tipul de obiect nu a fost facut pana acuma se va face si este memorat intr-o mapa
+	- daca exista deja este redat din mapa
+	
+Problema:
+	obiectele trebuia sa aiba atributele decuplate de ele si doar informatiile asemenea trebuie pastrate
+	informatiile care nu se aseamana pot fi procurate obiectului atunci cand este folosit
+REDUCE MEMORIA
+
+100 obiecte de 2 tipuri => in memorie avem doar 2 OBIECTE
+
+https://www.geeksforgeeks.org/flyweight-design-pattern/
+https://www.tutorialspoint.com/design_pattern/flyweight_pattern.htm

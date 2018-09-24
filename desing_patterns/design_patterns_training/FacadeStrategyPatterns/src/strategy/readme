@@ -1,0 +1,9 @@
+---
+Strategy
+---
+- Alegerea la runtime a unui algoritm(strategie)
+- E.g: alegerea unui tip de comperesie (TAR vs ZIP)
+	java Compare / Comparable
+- Dezavantaj: layer de complexitate in plus
+		Strategy and Context classes may be tightly coupled
+
