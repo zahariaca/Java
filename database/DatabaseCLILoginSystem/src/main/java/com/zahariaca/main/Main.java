@@ -16,7 +16,7 @@ public class Main {
         boolean exitCondition = false;
 
         while(!exitCondition) {
-            System.out.println(String.format("%n" +
+            System.out.println(String.format("Select an operation:%n" +
                     "   [1] See users. %n" +
                     "   [2] Create user %n" +
                     "   [3] Login. %n"  +
@@ -28,7 +28,7 @@ public class Main {
             }
 
             try (Connection con = DriverManager.getConnection(
-                    "jdbc:mysql://localhost:3306/cli_login", "root", "Mon.2017")) {
+                    "jdbc:mysql://localhost:3306/cli_login?autoReconnect=true&useSSL=false", "root", "Mon.2017")) {
                 if (Integer.valueOf(userInput) == 1) {
                     queryDbForAllUsers(con);
                 } else if (Integer.valueOf(userInput) == 2) {
@@ -76,7 +76,7 @@ public class Main {
                 ResultSet resultSet = stmt.executeQuery();
 
                 if (resultSet.next()) {
-                    System.out.println("Invalid username. Already exists! Try another username! %n");
+                    System.out.println(String.format("Invalid username. Already exists! Try another username! %n"));
                     username = null;
                 }
         }
@@ -152,9 +152,9 @@ public class Main {
         ResultSet resultSet = stmt.executeQuery();
 
         if (!resultSet.next()) {
-            System.out.println("Invalid login. Try again. %n");
+            System.out.println(String.format("%nInvalid login. Try again. %n"));
         } else {
-            System.out.println(String.format("Welcome: %s",
+            System.out.println(String.format("%nWelcome: %s%n",
                     resultSet.getString(1)));
         }
     }
