@@ -13,9 +13,7 @@ public class Main {
 
         Scanner scanner = new Scanner(System.in);
 
-        boolean exitCondition = false;
-
-        while(!exitCondition) {
+        while(true) {
             System.out.println(String.format("Select an operation:%n" +
                     "   [1] See users. %n" +
                     "   [2] Create user %n" +
@@ -23,7 +21,6 @@ public class Main {
                     "   [q/quit] to end process. %n"));
             String userInput = scanner.next();
             if (userInput.equalsIgnoreCase("quite") || userInput.equalsIgnoreCase("q")) {
-                exitCondition = true;
                 break;
             }
 
