@@ -143,9 +143,10 @@ public class Main {
         System.out.println("Enter your password: ");
         String password = scanner.next();
 
-        stmt = con.prepareStatement("SELECT CONCAT(first_name, '  ', last_name) FROM users WHERE username = ? AND password = ?");
+        stmt = con.prepareStatement("SELECT CONCAT(first_name, '  ', last_name), user_id FROM users WHERE username = ? AND password = ?");
         stmt.setString(1, username);
         stmt.setString(2, DigestUtils.sha256Hex(password));
+
         ResultSet resultSet = stmt.executeQuery();
 
         if (!resultSet.next()) {
@@ -153,7 +154,7 @@ public class Main {
         } else {
             System.out.println(String.format("%nWelcome: %s%n",
                     resultSet.getString(1)));
-            LoggedInHandler.INSTANCE.handleLoggedInUser(username);
+            LoggedInHandler.INSTANCE.handleLoggedInUser(username, resultSet.getString(2));
         }
     }
 
