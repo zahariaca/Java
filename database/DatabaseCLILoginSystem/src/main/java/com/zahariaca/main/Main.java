@@ -153,6 +153,7 @@ public class Main {
         } else {
             System.out.println(String.format("%nWelcome: %s%n",
                     resultSet.getString(1)));
+            LoggedInHandler.INSTANCE.handleLoggedInUser(username);
         }
     }
 
