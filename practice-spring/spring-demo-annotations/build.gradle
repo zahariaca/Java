@@ -1,0 +1,57 @@
+apply plugin: 'java'
+apply plugin:'idea'
+
+
+group 'com.zahariaca'
+version '1.0-SNAPSHOT'
+
+sourceCompatibility = 1.8
+
+repositories {
+    mavenCentral()
+
+    maven {
+        url "https://plugins.gradle.org/m2/"
+    }
+}
+
+dependencies {
+    compile group: 'org.springframework', name: 'spring-core', version: '5.1.0.RELEASE'
+    compile group: 'org.springframework', name: 'spring-beans', version: '5.1.0.RELEASE'
+    compile group: 'org.springframework', name: 'spring-context', version: '5.1.0.RELEASE'
+    compile group: 'org.springframework', name: 'spring-context-support', version: '5.1.0.RELEASE'
+    compile group: 'org.springframework', name: 'spring-expression', version: '5.1.0.RELEASE'
+    compile group: 'org.junit.jupiter', name: 'junit-jupiter-api', version: '5.3.1'
+    compile group: 'org.junit.jupiter', name: 'junit-jupiter-params', version: '5.3.1'
+    compile group: 'org.junit.jupiter', name: 'junit-jupiter-engine', version: '5.3.1'
+    
+
+    testCompile group: 'org.junit.jupiter', name: 'junit-jupiter-api', version: '5.3.1'
+    testCompile group: 'org.junit.jupiter', name: 'junit-jupiter-params', version: '5.3.1'
+    testCompile group: 'org.junit.jupiter', name: 'junit-jupiter-engine', version: '5.3.1'
+}
+
+test {
+    useJUnitPlatform()
+    testLogging {
+        events "passed", "skipped", "failed"
+    }
+}
+
+task setHttpProxyFromEnv {
+    def map = ['HTTP_PROXY': 'http', 'HTTPS_PROXY': 'https']
+    for (e in System.getenv()) {
+        def key = e.key.toUpperCase()
+        if (key in map) {
+            def base = map[key]
+            def url = e.value.toURL()
+            println " - systemProp.${base}.proxy=${url.host}:${url.port}"
+            System.setProperty("${base}.proxyHost", url.host.toString())
+            System.setProperty("${base}.proxyPort", url.port.toString())
+        }
+    }
+}
+
+wrapper {
+    gradleVersion = '4.10.2'
+}
