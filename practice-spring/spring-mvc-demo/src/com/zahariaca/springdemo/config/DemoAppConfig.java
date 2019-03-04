@@ -7,9 +7,9 @@ import org.springframework.web.servlet.ViewResolver;
 import org.springframework.web.servlet.config.annotation.EnableWebMvc;
 import org.springframework.web.servlet.view.InternalResourceViewResolver;
 
-//@Configuration
-//@EnableWebMvc
-//@ComponentScan(basePackages = "com.zahariaca.springdemo")
+@Configuration
+@EnableWebMvc
+@ComponentScan(basePackages = "com.zahariaca.springdemo")
 public class DemoAppConfig {
 
     @Bean

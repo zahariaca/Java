@@ -23,6 +23,9 @@
 	<!-- Load country options propertie file-->
 	<util:properties id="countryOptions" location="/WEB-INF/countries.properties" />
 
+	<!-- Load country options propertie file-->
+	<util:properties id="languageOptions" location="/WEB-INF/language.properties" />
+
 	<!-- Step 5: Define Spring MVC view resolver -->
 	<bean
 		class="org.springframework.web.servlet.view.InternalResourceViewResolver">
