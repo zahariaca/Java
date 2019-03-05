@@ -1,0 +1,52 @@
+
+fsquid:S2095m"OUse try-with-resources or close this "PreparedStatement" in a "finally" clause.(«®­
+P
+squid:S106›"9Replace this use of System.out or System.err by a logger.(ğÜûß
+lsquid:S2095’"OUse try-with-resources or close this "PreparedStatement" in a "finally" clause.(†è±øúÿÿÿÿ
+T
+squid:S106L"9Replace this use of System.out or System.err by a logger.(Öò“şÿÿÿÿ
+O
+squid:S106a"9Replace this use of System.out or System.err by a logger.(—Òœ
+U
+squid:S106Œ"9Replace this use of System.out or System.err by a logger.(ÌœÈÈşÿÿÿÿ
+O
+squid:S106T"9Replace this use of System.out or System.err by a logger.(š¼ÿ²
+O
+squid:S1065"9Replace this use of System.out or System.err by a logger.(¹“‹õ
+O
+squid:S106V"9Replace this use of System.out or System.err by a logger.(ôÔÁ
+O
+squid:S106Q"9Replace this use of System.out or System.err by a logger.(ô¸¯¼
+T
+squid:S106j"9Replace this use of System.out or System.err by a logger.(Éêà·ıÿÿÿÿ
+csquid:S2095I"GUse try-with-resources or close this "ResultSet" in a "finally" clause.(Ãèµßıÿÿÿÿ
+O
+squid:S106Z"9Replace this use of System.out or System.err by a logger.(Ú»ÄÊ
+dsquid:S2095–"GUse try-with-resources or close this "ResultSet" in a "finally" clause.(Ãèµßıÿÿÿÿ
+O
+squid:S106e"9Replace this use of System.out or System.err by a logger.(Ë¬úˆ
+U
+squid:S106™"9Replace this use of System.out or System.err by a logger.(ÎöôÔşÿÿÿÿ
+T
+squid:S106%"9Replace this use of System.out or System.err by a logger.(ÃÓ¾Şûÿÿÿÿ
+^squid:S2095w"GUse try-with-resources or close this "Statement" in a "finally" clause.(ü²ª±
+T
+squid:S106("9Replace this use of System.out or System.err by a logger.(¨¶ÑÍşÿÿÿÿ
+csquid:S20951"GUse try-with-resources or close this "Statement" in a "finally" clause.(íñéşÿÿÿÿ
+T
+squid:S106X"9Replace this use of System.out or System.err by a logger.(ãõ¯Úıÿÿÿÿ
+P
+squid:S106"9Replace this use of System.out or System.err by a logger.(ô¸¯¼
+esquid:S2095G"OUse try-with-resources or close this "PreparedStatement" in a "finally" clause.(ê•/
+T
+squid:S106{"9Replace this use of System.out or System.err by a logger.(âºŸûÿÿÿÿ
+csquid:S20952"GUse try-with-resources or close this "ResultSet" in a "finally" clause.(Âõì“øÿÿÿÿ
+T
+squid:S106D"9Replace this use of System.out or System.err by a logger.(ÌœÈÈşÿÿÿÿ
+csquid:S2095x"GUse try-with-resources or close this "ResultSet" in a "finally" clause.(‚Ş¢Şüÿÿÿÿ
+T
+squid:S106"9Replace this use of System.out or System.err by a logger.(ƒÎ‹òüÿÿÿÿ
+O
+squid:S106c"9Replace this use of System.out or System.err by a logger.(ŠÕş
+T
+squid:S106,"9Replace this use of System.out or System.err by a logger.(ƒœ½İùÿÿÿÿ

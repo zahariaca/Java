@@ -1,0 +1,104 @@
+
+T
+squid:S106C"9Replace this use of System.out or System.err by a logger.(ˆÄ³üøÿÿÿÿ
+gsquid:S2095à"OUse try-with-resources or close this "PreparedStatement" in a "finally" clause.(‡©‡
+gsquid:S2095‰"OUse try-with-resources or close this "PreparedStatement" in a "finally" clause.(éæµ¥
+P
+squid:S106³"9Replace this use of System.out or System.err by a logger.(‚ùø¡
+P
+squid:S106•"9Replace this use of System.out or System.err by a logger.(„Êş°
+P
+squid:S106"9Replace this use of System.out or System.err by a logger.(£½
+U
+squid:S106…"9Replace this use of System.out or System.err by a logger.(ªÓ¼áşÿÿÿÿ
+U
+squid:S106†"9Replace this use of System.out or System.err by a logger.(¾ı ¿øÿÿÿÿ
+O"squid:SwitchLastCaseIsDefaultCheck!""Add a default case to this switch.(õóÅ
+T
+squid:S106T"9Replace this use of System.out or System.err by a logger.(¾ãòÙşÿÿÿÿ
+^squid:S2095P"GUse try-with-resources or close this "ResultSet" in a "finally" clause.(ò¡¥¹
+Vsquid:S2130º"9Use "Integer.parseInt" for this string-to-int conversion.(İâ¬Åúÿÿÿÿ
+U
+squid:S106ó"9Replace this use of System.out or System.err by a logger.(™õ­ôÿÿÿÿÿ
+gsquid:S2095˜"OUse try-with-resources or close this "PreparedStatement" in a "finally" clause.(„ŒÂª
+gsquid:CommentedOutCodeLineJ"<This block of commented-out lines of code should be removed.(ğ¬‘µşÿÿÿÿ
+bsquid:CommentedOutCodeLined"<This block of commented-out lines of code should be removed.(¤™óæ
+_squid:S2095‹"GUse try-with-resources or close this "ResultSet" in a "finally" clause.(ò¡¥¹
+_squid:S2095ù"GUse try-with-resources or close this "ResultSet" in a "finally" clause.(ò¡¥¹
+U
+squid:S106Š"9Replace this use of System.out or System.err by a logger.(ãäÃèûÿÿÿÿ
+gsquid:S2095"OUse try-with-resources or close this "PreparedStatement" in a "finally" clause.(Á°­æ
+_squid:S2095¿"GUse try-with-resources or close this "ResultSet" in a "finally" clause.(ò¡¥¹
+T
+squid:S106"9Replace this use of System.out or System.err by a logger.(ƒÎ‹òüÿÿÿÿ
+U
+squid:S106Ú"9Replace this use of System.out or System.err by a logger.(­–¯šúÿÿÿÿ
+gsquid:S2095¼"OUse try-with-resources or close this "PreparedStatement" in a "finally" clause.(ıÉØÃ
+gsquid:S2095Ô"OUse try-with-resources or close this "PreparedStatement" in a "finally" clause.(¡ª¶ß
+P
+squid:S106í"9Replace this use of System.out or System.err by a logger.(óË•š
+U
+squid:S106Í"9Replace this use of System.out or System.err by a logger.(é§å øÿÿÿÿ
+ksquid:S2095s"OUse try-with-resources or close this "PreparedStatement" in a "finally" clause.(Ÿ±èİşÿÿÿÿ
+U
+squid:S106”"9Replace this use of System.out or System.err by a logger.(äèª¼ÿÿÿÿÿ
+P
+squid:S106æ"9Replace this use of System.out or System.err by a logger.(¿Í¯–
+T
+squid:S106\"9Replace this use of System.out or System.err by a logger.(œì˜’øÿÿÿÿ
+>squid:S1172š"&Remove these unused method parameters.(À ³ğ
+{squid:S1192Â"^Define a constant instead of duplicating this literal "Account ID is incorrect: [%s]" 3 times.(â²§úÿÿÿÿ
+P
+squid:S106Ñ"9Replace this use of System.out or System.err by a logger.(Ûº¼µ
+P
+squid:S106"9Replace this use of System.out or System.err by a logger.(£½
+Vsquid:S2130ô"9Use "Integer.parseInt" for this string-to-int conversion.(İâ¬Åúÿÿÿÿ
+P
+squid:S106¹"9Replace this use of System.out or System.err by a logger.(Ğ¯’
+^squid:S2095v"GUse try-with-resources or close this "ResultSet" in a "finally" clause.(ò¡¥¹
+T
+squid:S106b"9Replace this use of System.out or System.err by a logger.(ªÓ¼áşÿÿÿÿ
+ksquid:S2095e"OUse try-with-resources or close this "PreparedStatement" in a "finally" clause.(‹ƒèËúÿÿÿÿ
+T
+squid:S106<"9Replace this use of System.out or System.err by a logger.(ÃÓ¾Şûÿÿÿÿ
+T
+squid:S106Y"9Replace this use of System.out or System.err by a logger.(‚ÄŠüÿÿÿÿ
+gsquid:S2095è"OUse try-with-resources or close this "PreparedStatement" in a "finally" clause.(±Âêè
+P
+squid:S106›"9Replace this use of System.out or System.err by a logger.(êÎ›—
+dsquid:S2095×"GUse try-with-resources or close this "ResultSet" in a "finally" clause.(Å¥Íóÿÿÿÿÿ
+lsquid:S2095®"OUse try-with-resources or close this "PreparedStatement" in a "finally" clause.(Æôõÿùÿÿÿÿ
+U
+squid:S106€"9Replace this use of System.out or System.err by a logger.(ã‰Ÿşÿÿÿÿ
+dsquid:S2095Ê"GUse try-with-resources or close this "ResultSet" in a "finally" clause.(Å¥Íóÿÿÿÿÿ
+T
+squid:S106?"9Replace this use of System.out or System.err by a logger.(¨¶ÑÍşÿÿÿÿ
+U
+squid:S106Â"9Replace this use of System.out or System.err by a logger.(â²§úÿÿÿÿ
+T
+squid:S106p"9Replace this use of System.out or System.err by a logger.(½´úÿÿÿÿ
+O
+squid:S106^"9Replace this use of System.out or System.err by a logger.(ŠÕş
+O
+squid:S106`"9Replace this use of System.out or System.err by a logger.(Ë¬úˆ
+¹squid:S1192¼" Define a constant instead of duplicating this literal "SELECT account_id, balance FROM accounts WHERE accounts.user_id = ? AND accounts.account_id = ?" 3 times.(ıÉØÃ
+P
+squid:S106ƒ"9Replace this use of System.out or System.err by a logger.(„Êş°
+U
+squid:S106„"9Replace this use of System.out or System.err by a logger.(Óñéÿÿÿÿÿ
+lsquid:S2095È"OUse try-with-resources or close this "PreparedStatement" in a "finally" clause.(èã³¢ùÿÿÿÿ
+U
+squid:S106¤"9Replace this use of System.out or System.err by a logger.(õèªåÿÿÿÿÿ
+O
+squid:S106y"9Replace this use of System.out or System.err by a logger.(úãıœ
+U
+squid:S106—"9Replace this use of System.out or System.err by a logger.(ªÓ¼áşÿÿÿÿ
+U
+squid:S106«"9Replace this use of System.out or System.err by a logger.(á‘ğşÿÿÿÿ
+U
+squid:S106ü"9Replace this use of System.out or System.err by a logger.(â²§úÿÿÿÿ
+_squid:S2095š"GUse try-with-resources or close this "ResultSet" in a "finally" clause.(ò¡¥¹
+U
+squid:S106¦"9Replace this use of System.out or System.err by a logger.(ªÓ¼áşÿÿÿÿ
+fsquid:S2095K"OUse try-with-resources or close this "PreparedStatement" in a "finally" clause.(üÅÑÍ
+gsquid:S2095ö"OUse try-with-resources or close this "PreparedStatement" in a "finally" clause.(ıÉØÃ

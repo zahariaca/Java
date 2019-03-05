@@ -1,0 +1,16 @@
+
+R
+squid:S106"9Replace this use of System.out or System.err by a logger.(Ìæˆ„üÿÿÿÿ
+M
+squid:S106"9Replace this use of System.out or System.err by a logger.(äÅÊ
+R
+squid:S106"9Replace this use of System.out or System.err by a logger.(âˆŠáıÿÿÿÿ
+R
+squid:S106"9Replace this use of System.out or System.err by a logger.(şãÙ ùÿÿÿÿ
+R
+squid:S106"9Replace this use of System.out or System.err by a logger.(ÿÉ’¸øÿÿÿÿ
+R
+squid:S106"9Replace this use of System.out or System.err by a logger.(äùÎŞùÿÿÿÿ
+Asquid:S1612",Replace this lambda with a method reference.(äÅÊ
+Fsquid:S1612",Replace this lambda with a method reference.(äùÎŞùÿÿÿÿ
+Ssquid:UselessImportCheck"1Remove this unused import 'java.util.Comparator'.(î¹ó¹
