@@ -1,5 +1,7 @@
 package com.zahariaca.springdemo.model;
 
+import com.zahariaca.springdemo.validation.CourseCode;
+
 import javax.validation.constraints.*;
 
 public class Customer {
@@ -18,6 +20,7 @@ public class Customer {
     @Pattern(regexp = "^[a-zA-Z0-9]{5}", message = "exactly 5 chars/digits allowed")
     private String postalCode;
 
+    @CourseCode(value="ZAH", message = "must start with ZAH")
     private String courseCode;
 
     public String getFirstName() {
