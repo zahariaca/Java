@@ -26,12 +26,19 @@
 	<!-- Load country options propertie file-->
 	<util:properties id="languageOptions" location="/WEB-INF/language.properties" />
 
+
 	<!-- Step 5: Define Spring MVC view resolver -->
 	<bean
 		class="org.springframework.web.servlet.view.InternalResourceViewResolver">
 		<property name="prefix" value="/WEB-INF/view/" />
 		<property name="suffix" value=".jsp" />
 	</bean>
+
+    <!-- Load messages propertie file-->
+    <bean id="messageSource" class="org.springframework.context.support.ResourceBundleMessageSource">
+        <property name="basenames" value="messages" />
+    </bean>
+
 
 </beans>
 
