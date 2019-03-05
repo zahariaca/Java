@@ -15,5 +15,22 @@
         <property name="yearIsDateType" value="false" />
       </driver-properties>
     </data-source>
+    <data-source source="LOCAL" name="hibernate.cfg.xml/Hibernate" uuid="3d090093-daf6-487e-b800-3da75675edda">
+      <imported>true</imported>
+      <remarks>Hibernate
+
+F:/GitRepositories/Java/practice-hibernate/hibernate-tutorial/src/hibernate.cfg.xml</remarks>
+      <jdbc-driver>com.mysql.cj.jdbc.Driver</jdbc-driver>
+      <jdbc-url>jdbc:mysql://localhost:7000/hb_student_tracker?useSSL=false&amp;serverTimezone=UTC</jdbc-url>
+    </data-source>
+    <data-source source="LOCAL" name="hibernate-employee.cfg.xml/Hibernate" uuid="49af34b9-9db0-4aec-a530-aa004ff58301">
+      <imported>true</imported>
+      <configured-by-url>true</configured-by-url>
+      <remarks>Hibernate
+
+F:/GitRepositories/Java/practice-hibernate/hibernate-tutorial/src/hibernate-employee.cfg.xml</remarks>
+      <jdbc-driver>com.mysql.cj.jdbc.Driver</jdbc-driver>
+      <jdbc-url>jdbc:mysql://localhost:7000/hb_employee?useSSL=false&amp;serverTimezone=UTC</jdbc-url>
+    </data-source>
   </component>
 </project>
