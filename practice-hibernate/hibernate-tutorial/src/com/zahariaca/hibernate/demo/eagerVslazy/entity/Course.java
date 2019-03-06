@@ -1,4 +1,4 @@
-package com.zahariaca.hibernate.demo.oneToMany.entity;
+package com.zahariaca.hibernate.demo.eagerVslazy.entity;
 
 import javax.persistence.*;
 
@@ -51,6 +51,7 @@ public class Course {
         return "Course{" +
                 "id=" + id +
                 ", title='" + title + '\'' +
+                ", instructor=" + instructor +
                 '}';
     }
 }
