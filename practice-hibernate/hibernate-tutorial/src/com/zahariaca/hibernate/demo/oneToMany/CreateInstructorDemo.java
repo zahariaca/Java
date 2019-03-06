@@ -1,7 +1,8 @@
-package com.zahariaca.hibernate.demo.oneToOneUni;
+package com.zahariaca.hibernate.demo.oneToMany;
 
-import com.zahariaca.hibernate.demo.oneToOneUni.entity.InstructorDetail;
-import com.zahariaca.hibernate.demo.oneToOneUni.entity.Instructor;
+import com.zahariaca.hibernate.demo.oneToMany.entity.Course;
+import com.zahariaca.hibernate.demo.oneToMany.entity.Instructor;
+import com.zahariaca.hibernate.demo.oneToMany.entity.InstructorDetail;
 import org.hibernate.Session;
 import org.hibernate.SessionFactory;
 import org.hibernate.cfg.Configuration;
@@ -9,26 +10,23 @@ import org.hibernate.cfg.Configuration;
 /**
  * @author Zaharia Costin-Alexandru (zaharia.c.alexandru@gmail.com) on 05.03.2019
  */
-public class CreateDemo {
+public class CreateInstructorDemo {
     public static void main(String[] args) {
         SessionFactory factory= new Configuration()
-                                    .configure("hibernate-instructor.cfg.xml")
+                                    .configure("hibernate-instructor-oneToMany.cfg.xml")
                                     .addAnnotatedClass(Instructor.class)
                                     .addAnnotatedClass(InstructorDetail.class)
+                                    .addAnnotatedClass(Course.class)
                                     .buildSessionFactory();
 
         Session session = factory.getCurrentSession();
 
         try {
             // create the objects
-            Instructor tempInstructor = new Instructor("Chad", "Darby", "darby@luv2code.com");
-            InstructorDetail tempInstructorDetail = new InstructorDetail("http://luv2code.com/youtube", "Luv 2 code!!!");
-
-            Instructor tempInstructor2 = new Instructor("Madhu", "Patel", "madhu@luv2code.com");
-            InstructorDetail tempInstructorDetail2 = new InstructorDetail("http://www.youtube.com", "Guitar");
+            Instructor tempInstructor2 = new Instructor("Susan", "Public", "susan.public@luv2code.com");
+            InstructorDetail tempInstructorDetail2 = new InstructorDetail("http://www.youtube.com", "Gaming");
 
             // associate the objects
-            tempInstructor.setInstructorDetail(tempInstructorDetail);
             tempInstructor2.setInstructorDetail(tempInstructorDetail2);
 
             // begin transaction
@@ -36,8 +34,6 @@ public class CreateDemo {
 
             // save objects to db
             // NOTE: This will also save the instructorDetails, because CascadeType.ALL.
-            System.out.println("Saving instructor: " + tempInstructor);
-            session.save(tempInstructor);
             System.out.println("Saving instructor: " + tempInstructor2);
             session.save(tempInstructor2);
 
@@ -45,6 +41,7 @@ public class CreateDemo {
             session.getTransaction().commit();
 
         } finally {
+            session.close();
             factory.close();
         }
     }
