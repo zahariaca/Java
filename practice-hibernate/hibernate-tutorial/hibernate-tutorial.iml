@@ -5,6 +5,7 @@
       <configuration>
         <datasource-map>
           <unit-entry name="hibernate-employee.cfg.xml" value="49af34b9-9db0-4aec-a530-aa004ff58301" />
+          <unit-entry name="hibernate-instructor-manyToMany.cfg.xml" />
           <unit-entry name="hibernate-instructor-oneToMany.cfg.xml" />
           <unit-entry name="hibernate-instructor-oneToManyUni.cfg.xml" />
           <unit-entry name="hibernate-instructor.cfg.xml" />
