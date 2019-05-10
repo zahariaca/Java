@@ -5,6 +5,9 @@
       <configuration>
         <datasource-map>
           <unit-entry name="hibernate-employee.cfg.xml" value="49af34b9-9db0-4aec-a530-aa004ff58301" />
+          <unit-entry name="hibernate-instructor-oneToMany.cfg.xml" />
+          <unit-entry name="hibernate-instructor-oneToManyUni.cfg.xml" />
+          <unit-entry name="hibernate-instructor.cfg.xml" />
           <unit-entry name="hibernate.cfg.xml" value="3d090093-daf6-487e-b800-3da75675edda" />
         </datasource-map>
         <naming-strategy-map />
