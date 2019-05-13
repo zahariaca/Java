@@ -1,0 +1,6 @@
+
+]squid:S1161":Add the "@Override" annotation above this method signature(Ïû©Öûÿÿÿÿ8ï„‚¿–-
+Fsquid:S1148+"#Use a logger to log this exception.(€ÉÔ…ıÿÿÿÿ8¯Û‹¿–-
+fsquid:S2095$"HUse try-with-resources or close this "Connection" in a "finally" clause.(ä™Ôî8ÂÖ¿–-
+ysquid:S2068"V'password' detected in this expression, review this potentially hard-coded credential.(‰óÂùÿÿÿÿ8ÅŠ¿–-
+>squid:S2068$" Remove this hard-coded password.(ä™Ôî8ÂÖ¿–-
