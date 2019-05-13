@@ -1,6 +1,5 @@
 package com.zahariaca.springboot.cruddemo.rest;
 
-import com.zahariaca.springboot.cruddemo.dao.EmployeeDAO;
 import com.zahariaca.springboot.cruddemo.entity.Employee;
 import com.zahariaca.springboot.cruddemo.service.EmployeeService;
 import org.springframework.beans.factory.annotation.Autowired;
