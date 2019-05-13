@@ -1,5 +1,6 @@
 package com.zahariaca.springboot.tutorial.demo.rest;
 
+import org.springframework.beans.factory.annotation.Value;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RestController;
 
@@ -10,8 +11,14 @@ import java.time.LocalDateTime;
  */
 @RestController
 public class FunRestController {
-    // expose a '/' endpoint and return Hello World
 
+    @Value("${coach.name}")
+    private String coachName;
+    @Value("${team.name}")
+    private String teamName;
+
+
+    // expose a '/' endpoint and return Hello World
     @GetMapping("/")
     public String sayHello() {
         return "Hello World! Time on server is: " + LocalDateTime.now();
@@ -27,5 +34,11 @@ public class FunRestController {
     @GetMapping("/fortune")
     public String getDailyFortune() {
         return "Today is your lucky day!";
+    }
+
+    //expose a new endpoint for "teaminfo"
+    @GetMapping("/teaminfo")
+    public String getTeamInfo(){
+        return "Coache name=" + coachName + ", Team name=" + teamName;
     }
 }
