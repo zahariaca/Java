@@ -1,0 +1,11 @@
+
+[
+squid:S106"9Replace this use of System.out or System.err by a logger.(êè¦ùşÿÿÿÿ8ëœ”Ú­-
+[
+squid:S106"9Replace this use of System.out or System.err by a logger.(Ÿ´êùÿÿÿÿ8ëœ”Ú­-
+Asquid:S1148!"#Use a logger to log this exception.(Ç’Çê8ëœ”Ú­-
+V
+squid:S106"9Replace this use of System.out or System.err by a logger.(ÄíÄÄ8ëœ”Ú­-
+psquid:S00116"QRename this field "READER" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(ÌÑ—Ï8ëœ”Ú­-
+V
+squid:S106+"9Replace this use of System.out or System.err by a logger.(«ë8ëœ”Ú­-
