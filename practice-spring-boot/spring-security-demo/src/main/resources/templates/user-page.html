@@ -1,0 +1,14 @@
+<html xmlns:th="http://www.thymeleaf.org">
+
+<head>
+    <title>User Page</title>
+</head>
+
+<body>
+<label th:text="'Hello -> ' + ${userInfo}"></label>
+<form th:action="@{/logout}" method="post">
+    <input type="logout"/>
+</form>
+</body>
+
+</html>
