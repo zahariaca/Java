@@ -1,0 +1,14 @@
+import com.zahariaca.integrationdrools.pojo.TaxiRide
+import com.zahariaca.integrationdrools.pojo.Fare;
+import java.util.*;
+
+global com.zahariaca.integrationdrools.pojo.Fare rideFare;
+dialect  "mvel"
+
+rule "Calculate Taxi Fare - Scenario 1"
+    when
+        taxiRideInstance:TaxiRide(isNightSurcharge == false && distanceInMile < 10);
+    then
+        rideFare.setNightSurcharge(0L);
+        rideFare.setRideFare(70L);
+end
