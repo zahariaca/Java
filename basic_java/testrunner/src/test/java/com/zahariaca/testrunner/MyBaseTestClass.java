@@ -35,6 +35,7 @@ public class MyBaseTestClass {
             reports.get(value).add(new ReportPojo(id, false));
 
             watchedLog += description + "\n";
+
         }
 
         @Override
