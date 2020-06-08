@@ -22,6 +22,12 @@ export class ProductService {
       );
   }
 
+  getProductListPaginate(thePage: number, thePageSize: number, categoryId: number): Observable<GetResponseProducts> {
+    // build url based on category id /api/products/search/findByCategoryId?id=1&page=0&size=10
+    const searchUrl = `${this.baseurl}/search/findByCategoryId?id=${categoryId}&page=${thePage}&size=${thePageSize}`
+    return this.httpClient.get<GetResponseProducts>(searchUrl)
+  }
+
   getProductList(categoryId: number): Observable<Product[]> {
     // build url based on category id /api/products/search/findByCategoryId?id=1
     const searchUrl = `${this.baseurl}/search/findByCategoryId?id=${categoryId}`
@@ -31,6 +37,12 @@ export class ProductService {
   searchProducts(theKeyWord: string) {
     const searchUrl = `${this.baseurl}/search/findByNameContaining?name=${theKeyWord}`
     return this.getProducts(searchUrl)
+  }
+
+  searchProductsPaginate(thePage: number, thePageSize: number, theKeyWord: string): Observable<GetResponseProducts> {
+    // build url based on category id /search/findByNameContaining?name=Java&page=0&size=10
+    const searchUrl = `${this.baseurl}/search/findByNameContaining?name=${theKeyWord}&page=${thePage}&size=${thePageSize}`
+    return this.httpClient.get<GetResponseProducts>(searchUrl)
   }
 
   private getProducts(searchUrl: string): Observable<Product[]> {
@@ -52,10 +64,17 @@ export class ProductService {
 interface GetResponseProducts {
   _embedded: {
     products: Product[];
+    page: {
+      size: number,
+      totalElements: number,
+      totalPages: number,
+      number: number
+    }
   };
 }
 
 // TODO: read more about this, unclear how it works
+// a representation of the JSON we are receiving
 interface GetResponseProductCategory {
   _embedded: {
     productCategory: ProductCategory[];
