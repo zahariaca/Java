@@ -20,7 +20,7 @@ public class PrimaryKeyDemo {
         // create a session
         Session session = factory.getCurrentSession();
 
-        try{
+        try {
             // create the students objects
             System.out.println("Creating 3 new students objects");
             Student student1 = new Student("Bonita", "Applebum", "bonita.applebum@gmail.com");
@@ -41,7 +41,7 @@ public class PrimaryKeyDemo {
             session.getTransaction().commit();
 
             System.out.println("Done");
-        }finally {
+        } finally {
             factory.close();
         }
     }

@@ -20,7 +20,7 @@ public class UpdateStudentDemo {
             int studentId = 1;
 
             // now get a new session and start transaction
-            session =factory.getCurrentSession();
+            session = factory.getCurrentSession();
             session.beginTransaction();
 
             // retrieve student based on the id: primary key

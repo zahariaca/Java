@@ -10,14 +10,14 @@ import org.hibernate.cfg.Configuration;
  */
 public class AddCoursesForMaryDemo {
     public static void main(String[] args) {
-        SessionFactory factory= new Configuration()
-                                    .configure("hibernate-instructor-manyToMany.cfg.xml")
-                                    .addAnnotatedClass(Instructor.class)
-                                    .addAnnotatedClass(InstructorDetail.class)
-                                    .addAnnotatedClass(Course.class)
-                                    .addAnnotatedClass(Review.class)
-                                    .addAnnotatedClass(Student.class)
-                                    .buildSessionFactory();
+        SessionFactory factory = new Configuration()
+                .configure("hibernate-instructor-manyToMany.cfg.xml")
+                .addAnnotatedClass(Instructor.class)
+                .addAnnotatedClass(InstructorDetail.class)
+                .addAnnotatedClass(Course.class)
+                .addAnnotatedClass(Review.class)
+                .addAnnotatedClass(Student.class)
+                .buildSessionFactory();
 
         Session session = factory.getCurrentSession();
 
@@ -33,7 +33,7 @@ public class AddCoursesForMaryDemo {
             // create more courses
             Course course1 = new Course("Rubik's  Cube - How to Speed Cube");
             Course course2 = new Course("Atari 2600 - Game Development");
-            Course course3  = new Course("Spring boot");
+            Course course3 = new Course("Spring boot");
 
             // add mary to those courses
             System.out.println("Saving the courses...");

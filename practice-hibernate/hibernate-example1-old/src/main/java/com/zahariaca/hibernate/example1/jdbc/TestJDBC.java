@@ -15,13 +15,13 @@ public class TestJDBC {
         String password = "hbstudent";
 
 
-        try{
+        try {
             System.out.println("Connecting to database: " + jdbcURL);
 
             Connection connection = DriverManager.getConnection(jdbcURL, username, password);
 
             System.out.println("Connection successful");
-        }catch (Exception ex){
+        } catch (Exception ex) {
             ex.printStackTrace();
         }
     }

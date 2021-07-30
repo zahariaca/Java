@@ -35,7 +35,7 @@ public class DeleteStudentDemo {
             session.getTransaction().commit();*/
 
             // now get a new session and start transaction*/
-            session =factory.getCurrentSession();
+            session = factory.getCurrentSession();
             session.beginTransaction();
 
             // delete student id=2

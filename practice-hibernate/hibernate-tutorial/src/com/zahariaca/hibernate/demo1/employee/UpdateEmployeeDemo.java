@@ -8,9 +8,9 @@ import org.hibernate.cfg.Configuration;
 public class UpdateEmployeeDemo {
     public static void main(String[] args) {
         SessionFactory factory = new Configuration()
-                                    .configure("hibernate-employee.cfg.xml")
-                                    .addAnnotatedClass(Employee.class)
-                                    .buildSessionFactory();
+                .configure("hibernate-employee.cfg.xml")
+                .addAnnotatedClass(Employee.class)
+                .buildSessionFactory();
 
         Session session = factory.getCurrentSession();
 
@@ -31,7 +31,7 @@ public class UpdateEmployeeDemo {
             System.out.println("update all employees with company='APPL' to company='APPL Inc'");
             session.createQuery("UPDATE Employee e SET e.company='APPL Inc' WHERE e.company='APPL'").executeUpdate();
 
-            session.createQuery("FROM Employee").getResultList().stream().map(s-> "    " + s).forEach(System.out::println);
+            session.createQuery("FROM Employee").getResultList().stream().map(s -> "    " + s).forEach(System.out::println);
 
             // commit transaction
             System.out.println("Committing transaction");

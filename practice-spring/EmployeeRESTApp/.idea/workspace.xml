@@ -2,7 +2,10 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="41402498-8a79-4f44-a02e-70365babfb18" name="Default" comment="">
-      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/encodings.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/encodings.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__com_fasterxml_jackson_core_jackson_databind_2_8_1.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/EmployeeRESTApp.iml" beforeDir="false" afterPath="$PROJECT_DIR$/EmployeeRESTApp.iml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -231,12 +234,23 @@
       <workItem from="1491248332484" duration="375000" />
       <workItem from="1491248730354" duration="399000" />
       <workItem from="1492189770943" duration="1097000" />
-      <workItem from="1591605094462" duration="15000" />
+      <workItem from="1591605094462" duration="78000" />
+      <workItem from="1591774723593" duration="920000" />
     </task>
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="2" />
+  </component>
+  <component name="WindowStateProjectService">
+    <state x="740" y="260" key="FileChooserDialogImpl" timestamp="1591779810551">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state x="740" y="260" key="FileChooserDialogImpl/0.0.1920.1040@0.0.1920.1040" timestamp="1591779810551" />
+    <state x="380" y="202" key="new project wizard" timestamp="1591779822754">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state x="380" y="202" key="new project wizard/0.0.1920.1040@0.0.1920.1040" timestamp="1591779822754" />
   </component>
   <component name="antWorkspaceConfiguration">
     <option name="IS_AUTOSCROLL_TO_SOURCE" value="false" />

@@ -13,13 +13,13 @@ import org.hibernate.cfg.Configuration;
  */
 public class GetCourseAndReviewsDemo {
     public static void main(String[] args) {
-        SessionFactory factory= new Configuration()
-                                    .configure("hibernate-instructor-oneToManyUni.cfg.xml")
-                                    .addAnnotatedClass(Instructor.class)
-                                    .addAnnotatedClass(InstructorDetail.class)
-                                    .addAnnotatedClass(Course.class)
-                                    .addAnnotatedClass(Review.class)
-                                    .buildSessionFactory();
+        SessionFactory factory = new Configuration()
+                .configure("hibernate-instructor-oneToManyUni.cfg.xml")
+                .addAnnotatedClass(Instructor.class)
+                .addAnnotatedClass(InstructorDetail.class)
+                .addAnnotatedClass(Course.class)
+                .addAnnotatedClass(Review.class)
+                .buildSessionFactory();
 
         Session session = factory.getCurrentSession();
 

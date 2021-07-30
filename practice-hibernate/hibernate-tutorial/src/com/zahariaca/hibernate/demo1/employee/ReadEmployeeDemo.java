@@ -10,9 +10,9 @@ import java.util.List;
 public class ReadEmployeeDemo {
     public static void main(String[] args) {
         SessionFactory factory = new Configuration()
-                                    .configure("hibernate-employee.cfg.xml")
-                                    .addAnnotatedClass(Employee.class)
-                                    .buildSessionFactory();
+                .configure("hibernate-employee.cfg.xml")
+                .addAnnotatedClass(Employee.class)
+                .buildSessionFactory();
 
         Session session = factory.getCurrentSession();
 

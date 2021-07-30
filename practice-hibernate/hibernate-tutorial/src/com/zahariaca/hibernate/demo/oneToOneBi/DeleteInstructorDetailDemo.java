@@ -11,11 +11,11 @@ import org.hibernate.cfg.Configuration;
  */
 public class DeleteInstructorDetailDemo {
     public static void main(String[] args) {
-        SessionFactory factory= new Configuration()
-                                    .configure("hibernate-instructor.cfg.xml")
-                                    .addAnnotatedClass(Instructor.class)
-                                    .addAnnotatedClass(InstructorDetail.class)
-                                    .buildSessionFactory();
+        SessionFactory factory = new Configuration()
+                .configure("hibernate-instructor.cfg.xml")
+                .addAnnotatedClass(Instructor.class)
+                .addAnnotatedClass(InstructorDetail.class)
+                .buildSessionFactory();
 
         Session session = factory.getCurrentSession();
 

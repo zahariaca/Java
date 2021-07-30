@@ -8,9 +8,9 @@ import org.hibernate.cfg.Configuration;
 public class DeleteEmployeeDemo {
     public static void main(String[] args) {
         SessionFactory factory = new Configuration()
-                                    .configure("hibernate-employee.cfg.xml")
-                                    .addAnnotatedClass(Employee.class)
-                                    .buildSessionFactory();
+                .configure("hibernate-employee.cfg.xml")
+                .addAnnotatedClass(Employee.class)
+                .buildSessionFactory();
 
         Session session = factory.getCurrentSession();
 
@@ -43,16 +43,16 @@ public class DeleteEmployeeDemo {
             Employee tempEmpl = session.get(Employee.class, employee1.getId());
             System.out.println("Got employee: " + tempEmpl);
             System.out.println("Employees before delete: ");
-            session.createQuery("FROM Employee").getResultList().stream().map(s-> "    " + s).forEach(System.out::println);
+            session.createQuery("FROM Employee").getResultList().stream().map(s -> "    " + s).forEach(System.out::println);
             System.out.println("Deleting employee: " + tempEmpl);
             session.delete(tempEmpl);
             System.out.println("Employees after delete");
-            session.createQuery("FROM Employee").getResultList().stream().map(s-> "    " + s).forEach(System.out::println);
+            session.createQuery("FROM Employee").getResultList().stream().map(s -> "    " + s).forEach(System.out::println);
 
             // delete employees with firstName='Delete2'
             session.createQuery("DELETE FROM Employee e WHERE e.firstName='Delete2'").executeUpdate();
             System.out.println("Employees after second delete");
-            session.createQuery("FROM Employee").getResultList().stream().map(s-> "    " + s).forEach(System.out::println);
+            session.createQuery("FROM Employee").getResultList().stream().map(s -> "    " + s).forEach(System.out::println);
 
             // commit transaction
             System.out.println("Committing transaction");

@@ -16,14 +16,14 @@ public class QueryStudentDemo {
 
         // create session factory
         SessionFactory factory = new Configuration()
-                                    .configure("hibernate.cfg.xml")
-                                    .addAnnotatedClass(Student.class)
-                                    .buildSessionFactory();
+                .configure("hibernate.cfg.xml")
+                .addAnnotatedClass(Student.class)
+                .buildSessionFactory();
 
         // create a session
         Session session = factory.getCurrentSession();
 
-        try{
+        try {
             // start a transaction
             session.beginTransaction();
 
@@ -60,14 +60,14 @@ public class QueryStudentDemo {
             session.getTransaction().commit();
 
             System.out.println("\n==================================================\nDone");
-        }finally {
+        } finally {
             factory.close();
         }
     }
 
     private static void displayStudents(List<Student> theStudents) {
         // display all the students
-        for (Student s : theStudents){
+        for (Student s : theStudents) {
             System.out.println("Student: " + s);
         }
     }

@@ -1,5 +1,7 @@
-CREATE DATABASE  IF NOT EXISTS `hb_student_tracker`;
-USE `hb_student_tracker`;
+CREATE
+DATABASE  IF NOT EXISTS `hb_student_tracker`;
+USE
+`hb_student_tracker`;
 
 --
 -- Table structure for table `student`
@@ -7,11 +9,12 @@ USE `hb_student_tracker`;
 
 DROP TABLE IF EXISTS `student`;
 
-CREATE TABLE `student` (
-  `id` int(11) NOT NULL AUTO_INCREMENT,
-  `first_name` varchar(45) DEFAULT NULL,
-  `last_name` varchar(45) DEFAULT NULL,
-  `email` varchar(45) DEFAULT NULL,
-  PRIMARY KEY (`id`)
+CREATE TABLE `student`
+(
+    `id`         int(11) NOT NULL AUTO_INCREMENT,
+    `first_name` varchar(45) DEFAULT NULL,
+    `last_name`  varchar(45) DEFAULT NULL,
+    `email`      varchar(45) DEFAULT NULL,
+    PRIMARY KEY (`id`)
 ) ENGINE=InnoDB AUTO_INCREMENT=1 DEFAULT CHARSET=latin1;
 

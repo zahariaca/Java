@@ -14,15 +14,15 @@ public class UpdateStudentDemo {
 
         // create session factory
         SessionFactory factory = new Configuration()
-                                    .configure("hibernate.cfg.xml")
-                                    .addAnnotatedClass(Student.class)
-                                    .buildSessionFactory();
+                .configure("hibernate.cfg.xml")
+                .addAnnotatedClass(Student.class)
+                .buildSessionFactory();
 
         // create a session
         Session session = factory.getCurrentSession();
 
-        try{
-            int studentID=1;
+        try {
+            int studentID = 1;
             // start a transaction
             session.beginTransaction();
 
@@ -64,7 +64,7 @@ public class UpdateStudentDemo {
 
             System.out.println("Done!");
 
-        }finally {
+        } finally {
             factory.close();
         }
     }

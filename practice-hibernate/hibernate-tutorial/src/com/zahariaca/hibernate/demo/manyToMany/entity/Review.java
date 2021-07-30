@@ -3,13 +3,13 @@ package com.zahariaca.hibernate.demo.manyToMany.entity;
 import javax.persistence.*;
 
 @Entity
-@Table(name="review")
+@Table(name = "review")
 public class Review {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    @Column(name="id")
+    @Column(name = "id")
     private int id;
-    @Column(name="comment")
+    @Column(name = "comment")
     private String comment;
 
     public Review() {

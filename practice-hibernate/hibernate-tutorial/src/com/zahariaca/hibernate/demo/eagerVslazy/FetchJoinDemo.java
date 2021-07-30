@@ -13,12 +13,12 @@ import org.hibernate.query.Query;
  */
 public class FetchJoinDemo {
     public static void main(String[] args) {
-        SessionFactory factory= new Configuration()
-                                    .configure("hibernate-instructor-oneToMany.cfg.xml")
-                                    .addAnnotatedClass(Instructor.class)
-                                    .addAnnotatedClass(InstructorDetail.class)
-                                    .addAnnotatedClass(Course.class)
-                                    .buildSessionFactory();
+        SessionFactory factory = new Configuration()
+                .configure("hibernate-instructor-oneToMany.cfg.xml")
+                .addAnnotatedClass(Instructor.class)
+                .addAnnotatedClass(InstructorDetail.class)
+                .addAnnotatedClass(Course.class)
+                .buildSessionFactory();
 
         Session session = factory.getCurrentSession();
 
