@@ -155,4 +155,12 @@ class ItemsHandlerTest {
                 .expectStatus().isNotFound();
     }
 
+    @Test
+    void runtimeException() {
+        webTestClient.get().uri("/fun/runtimeException")
+                .exchange()
+                .expectStatus().is5xxServerError()
+                .expectBody()
+                .jsonPath("$.error", "Internal Server Error");
+    }
 }

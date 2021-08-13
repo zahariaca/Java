@@ -30,6 +30,12 @@ public class ItemController {
                 .defaultIfEmpty(new ResponseEntity<>(NOT_FOUND));
     }
 
+    @GetMapping(ITEM_END_POINT_V1 + "/runtimeException")
+    public Flux<Item> runtimeException() {
+        return itemReactiveRepository.findAll()
+                .concatWith(Mono.error(new RuntimeException("RuntimeException occurred")));
+    }
+
     @PostMapping(ITEM_END_POINT_V1)
     @ResponseStatus(CREATED)
     public Mono<Item> createItem(@RequestBody Item item) {

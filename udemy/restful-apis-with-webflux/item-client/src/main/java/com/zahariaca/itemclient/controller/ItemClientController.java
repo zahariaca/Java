@@ -1,6 +1,8 @@
 package com.zahariaca.itemclient.controller;
 
 import com.zahariaca.itemclient.domain.Item;
+import lombok.extern.slf4j.Slf4j;
+import org.springframework.http.HttpStatus;
 import org.springframework.web.bind.annotation.*;
 import org.springframework.web.reactive.function.client.WebClient;
 import reactor.core.publisher.Flux;
@@ -9,6 +11,7 @@ import reactor.core.publisher.Mono;
 import static org.springframework.http.MediaType.APPLICATION_JSON;
 
 @RestController
+@Slf4j
 public class ItemClientController {
     private final WebClient webClient = WebClient.create("http://localhost:8080");
 
@@ -61,5 +64,19 @@ public class ItemClientController {
                 .retrieve()
                 .bodyToMono(Void.class)
                 .log("Delete item is: ");
+    }
+
+    @GetMapping("/client/retrieve/error")
+    public Flux<Item> errorRetrieve() {
+        return webClient.get().uri("/v1/items/runtimeException")
+                .retrieve()
+                .onStatus(HttpStatus::is5xxServerError, clientResponse -> {
+                    Mono<String> errorMono = clientResponse.bodyToMono(String.class);
+                    return errorMono.flatMap(errorMessage -> {
+                        log.error("The error message is: " + errorMessage);
+                        return Mono.error(new RuntimeException(errorMessage));
+                    });
+                })
+                .bodyToFlux(Item.class);
     }
 }
