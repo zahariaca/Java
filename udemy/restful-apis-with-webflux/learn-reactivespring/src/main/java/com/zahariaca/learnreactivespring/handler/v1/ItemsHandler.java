@@ -1,6 +1,8 @@
 package com.zahariaca.learnreactivespring.handler.v1;
 
 import com.zahariaca.learnreactivespring.document.Item;
+import com.zahariaca.learnreactivespring.document.ItemCapped;
+import com.zahariaca.learnreactivespring.repository.ItemCappedReactiveRepository;
 import com.zahariaca.learnreactivespring.repository.ItemReactiveRepository;
 import lombok.RequiredArgsConstructor;
 import org.springframework.stereotype.Component;
@@ -9,11 +11,13 @@ import org.springframework.web.reactive.function.server.ServerResponse;
 import reactor.core.publisher.Mono;
 
 import static org.springframework.http.MediaType.APPLICATION_JSON;
+import static org.springframework.http.MediaType.APPLICATION_STREAM_JSON;
 
 @Component
 @RequiredArgsConstructor
 public class ItemsHandler {
     private final ItemReactiveRepository itemReactiveRepository;
+    private final ItemCappedReactiveRepository itemCappedReactiveRepository;
     private final Mono<ServerResponse> notFound = ServerResponse.notFound().build();
 
     public Mono<ServerResponse> getAllItems(ServerRequest serverRequest) {
@@ -78,5 +82,11 @@ public class ItemsHandler {
 
     public Mono<ServerResponse> runtimeException(ServerRequest serverRequest) {
         throw new RuntimeException("RuntimeException occurred");
+    }
+
+    public Mono<ServerResponse> itemsStream(ServerRequest serverRequest) {
+        return ServerResponse.ok()
+                .contentType(APPLICATION_STREAM_JSON)
+                .body(itemCappedReactiveRepository.findItemsBy(), ItemCapped.class);
     }
 }

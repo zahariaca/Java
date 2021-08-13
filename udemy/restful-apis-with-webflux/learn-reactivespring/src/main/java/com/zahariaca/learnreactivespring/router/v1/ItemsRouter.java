@@ -1,5 +1,6 @@
 package com.zahariaca.learnreactivespring.router.v1;
 
+import com.zahariaca.learnreactivespring.document.Item;
 import com.zahariaca.learnreactivespring.handler.v1.ItemsHandler;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
@@ -8,7 +9,9 @@ import org.springframework.web.reactive.function.server.RouterFunctions;
 import org.springframework.web.reactive.function.server.ServerResponse;
 
 import static com.zahariaca.learnreactivespring.constants.ItemConstants.ITEM_FUNCTIONAL_END_POINT_V1;
+import static com.zahariaca.learnreactivespring.constants.ItemConstants.ITEM_STREAM_FUNCTIONAL_END_POINT_V1;
 import static org.springframework.http.MediaType.APPLICATION_JSON;
+import static org.springframework.http.MediaType.APPLICATION_STREAM_JSON;
 import static org.springframework.web.reactive.function.server.RequestPredicates.*;
 
 @Configuration
@@ -28,5 +31,11 @@ public class ItemsRouter {
     public RouterFunction<ServerResponse> errorRoute(ItemsHandler itemsHandler) {
         return RouterFunctions
                 .route(GET("/fun/runtimeException").and(accept(APPLICATION_JSON)), itemsHandler::runtimeException);
+    }
+
+    @Bean
+    public RouterFunction<ServerResponse> itemsCappedStreamRoute(ItemsHandler itemsHandler) {
+        return RouterFunctions
+                .route(GET(ITEM_STREAM_FUNCTIONAL_END_POINT_V1).and(accept(APPLICATION_STREAM_JSON)), itemsHandler::itemsStream);
     }
 }

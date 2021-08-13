@@ -17,8 +17,7 @@ import reactor.test.StepVerifier;
 
 import java.util.List;
 
-import static com.zahariaca.learnreactivespring.constants.ItemConstants.ITEM_END_POINT_V1;
-import static com.zahariaca.learnreactivespring.constants.ItemConstants.ITEM_FUNCTIONAL_END_POINT_V1;
+import static com.zahariaca.learnreactivespring.constants.ItemConstants.*;
 import static org.junit.jupiter.api.Assertions.assertNotNull;
 import static org.springframework.http.MediaType.APPLICATION_JSON;
 
@@ -163,4 +162,6 @@ class ItemsHandlerTest {
                 .expectBody()
                 .jsonPath("$.error", "Internal Server Error");
     }
+
+
 }
