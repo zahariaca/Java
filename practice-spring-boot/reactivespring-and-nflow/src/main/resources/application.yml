@@ -1,0 +1,11 @@
+spring:
+  profiles:
+    active: nflow.db.h2
+  data:
+    mongodb:
+      host: localhost
+      port: 27017
+      database: local
+logging:
+  level:
+    h2database: ERROR
