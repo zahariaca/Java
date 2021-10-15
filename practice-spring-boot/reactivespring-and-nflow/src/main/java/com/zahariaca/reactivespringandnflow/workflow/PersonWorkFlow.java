@@ -1,5 +1,6 @@
 package com.zahariaca.reactivespringandnflow.workflow;
 
+import io.micrometer.core.annotation.Timed;
 import io.nflow.engine.workflow.definition.*;
 import lombok.RequiredArgsConstructor;
 import lombok.extern.slf4j.Slf4j;
@@ -13,7 +14,7 @@ import static io.nflow.engine.workflow.definition.WorkflowStateType.*;
 @Slf4j
 @Component
 public class PersonWorkFlow extends WorkflowDefinition<PersonWorkFlow.MyState> {
-    public static final String TYPE = "personWorkFLow";
+    public static final String TYPE = "PersonWorkFLow";
 
     @RequiredArgsConstructor
     public enum MyState implements WorkflowState {
@@ -40,12 +41,15 @@ public class PersonWorkFlow extends WorkflowDefinition<PersonWorkFlow.MyState> {
         permit(my_start, my_end);
     }
 
+    @Timed
     public NextAction my_start(StateExecution execution) {
         log.info("NextAction: -> my_start");
         execution.setVariable("test", "//set in my_start//");
-        return moveToStateAfter(my_end, DateTime.now().plusSeconds(10), "Moving to my_end state");
+//        throw new RuntimeException();
+        return moveToStateAfter(my_end, DateTime.now().plusSeconds(5), "Moving to my_end state");
     }
 
+    @Timed
     public void my_end(StateExecution execution) {
         log.info("NextAction: -> my_end");
         log.info("Get variable set by my_start: " + execution.getVariable("test"));

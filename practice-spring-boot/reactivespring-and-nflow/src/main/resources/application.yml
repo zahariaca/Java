@@ -1,11 +1,66 @@
-spring:
-  profiles:
-    active: nflow.db.h2
-  data:
-    mongodb:
-      host: localhost
-      port: 27017
-      database: local
 logging:
   level:
     h2database: ERROR
+management:
+  endpoint:
+    health:
+      show-details: always
+    loggers:
+      enabled: ${MANAGEMENT_ENDPOINT_LOGGERS_ENABLED:true}
+  endpoints:
+    web:
+      exposure:
+        include: ${MANAGEMENT_EXPOSURE:prometheus,health,info,httptrace,loggers}
+  trace:
+    http:
+      enabled: ${MANAGEMENT_HTTP_TRACE_ENABLED:true}
+spring:
+  data:
+    mongodb:
+      database: local
+      host: localhost
+      port: 27017
+  profiles:
+    active: nflow.db.h2
+
+test:
+  application:
+    name: InjectMapFromYAML
+    url: http://injectmapfromyaml.dev
+    description: How To Inject a map from a YAML File in Spring Boot
+  config:
+    ips:
+      - 10.10.10.10
+      - 10.10.10.11
+      - 10.10.10.12
+      - 10.10.10.13
+    filesystem:
+      - /dev/root
+      - /dev/md2
+      - /dev/md4
+  users:
+    root:
+      username: root
+      password: rootpass
+    guest:
+      username: guest
+      password: guestpass
+  test-map:
+    primary-key1:
+      key11: value11
+      key12: value12
+    primary-key2:
+      key21: value21
+      key22: value22
+    primary-key3:
+      key31: value31
+      key32: value32
+  test-map2:
+    primary-key1:
+      key11: value11
+      key12: value12
+    primary-key2:
+      key21: value21
+      key22: value22
+    primary-key3: { key31: "value31", key32: "value32" }
+  test-object: "key11111"

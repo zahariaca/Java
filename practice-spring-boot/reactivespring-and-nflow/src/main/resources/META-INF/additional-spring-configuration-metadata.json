@@ -1,0 +1,13 @@
+{
+  "properties": [
+    {
+      "name": "test.application.name",
+      "type": "java.lang.String",
+      "description": "Description for test.application.name."
+    },
+    {
+      "name": "test.application.url",
+      "type": "java.lang.String",
+      "description": "Description for test.application.url."
+    }
+  ] }

@@ -3,6 +3,7 @@ package com.zahariaca.reactivespringandnflow.service;
 import com.zahariaca.reactivespringandnflow.document.Person;
 import com.zahariaca.reactivespringandnflow.repository.PersonReactiveRepository;
 import com.zahariaca.reactivespringandnflow.workflow.PersonWorkFlow;
+import io.nflow.engine.internal.executor.WorkflowStateProcessorFactory;
 import io.nflow.engine.service.WorkflowInstanceService;
 import io.nflow.engine.workflow.instance.WorkflowInstanceFactory;
 import lombok.RequiredArgsConstructor;
@@ -22,6 +23,7 @@ public class PersonService {
                 .setType(PersonWorkFlow.TYPE)
                 .setExternalId("person-workflow-test")
                 .build());
+
         return personReactiveRepository.findAll();
     }
 
