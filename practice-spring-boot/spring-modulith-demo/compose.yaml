@@ -1,0 +1,99 @@
+services:
+  database:
+    image: 'mariadb:latest'
+    ports:
+      - '43306:3306'
+    environment:
+      - 'MYSQL_DATABASE=mydatabase'
+      - 'MYSQL_USER=root'
+      - 'MYSQL_ROOT_PASSWORD=root'
+    networks:
+      qa:
+        aliases:
+          - 'test-alias.db'
+  zookeper:
+    image: 'zookeeper:latest'
+    ports:
+      - '43181:2181'
+    networks:
+      qa:
+        aliases:
+          - 'test-alias.zookeper'
+    healthcheck:
+      test: nc -z localhost 2181 || exit -1
+      interval: 3s
+      timeout: 1s
+      retries: 5
+      start_period: 3s
+    depends_on:
+      - database
+  kafka:
+    image: 'fogsyio/kafka:2.2.0'
+    ports:
+      - '43092:43092'
+    environment:
+      - 'KAFKA_LISTENERS=LISTENER_DOCKER://test-alias.kafka:9092,LISTENER_HOST://test-alias.kafka:43092'
+      - 'KAFKA_ADVERTISED_LISTENERS=LISTENER_DOCKER://test-alias.kafka:9092,LISTENER_HOST://localhost:43092'
+      - 'KAFKA_LISTENER_SECURITY_PROTOCOL_MAP=LISTENER_DOCKER:PLAINTEXT,LISTENER_HOST:PLAINTEXT'
+      - 'KAFKA_INTER_BROKER_LISTENER_NAME=LISTENER_DOCKER'
+      - 'KAFKA_OFFSETS_TOPIC_REPLICATION_FACTOR=1'
+      - 'KAFKA_BROKER_ID=1'
+      - 'KAFKA_ZOOKEEPER_CONNECT=test-alias.zookeper:2181'
+      - 'KAFKA_CREATE_TOPICS=content-stream-detection-input:1:1,content-stream-detection-output:1:1'
+      - 'KAFKA_RECEIVER_MAX_POLL_INTERVAL_MILLIS=1000'
+    networks:
+      qa:
+        aliases:
+          - 'test-alias.kafka'
+    depends_on:
+      zookeper:
+        condition: service_healthy
+  memcached:
+    image: 'memcached'
+    ports:
+      - '43211:11211'
+    command: memcached -m 64
+    networks:
+      qa:
+        aliases:
+          - 'test-alias.memcached'
+  redis:
+    image: 'redis:7.0.5'
+    ports:
+      - '43379:6379'
+    networks:
+      qa:
+        aliases:
+          - 'test-alias.redis'
+  wiremock:
+    image: 'wiremock/wiremock:3.3.1'
+    ports:
+      - '43100:8080'
+    networks:
+      qa:
+        aliases:
+          - 'test-alias.wiremock'
+  localstack:
+    image: 'localstack/localstack:2.0.1'
+    ports:
+      - '43566:4566'
+    environment:
+      - 'LOCALSTACK_HOST=test-alias.localstack'
+      - 'EDGE_PORT=4566'
+      - 'EXTERNAL_SERVICE_PORTS_START=4510'
+      - 'EXTERNAL_SERVICE_PORTS_END=4560'
+      - 'AWS_DEFAULT_REGION=eu-west-1'
+      - 'AWS_ACCESS_KEY_ID=x'
+      - 'AWS_SECRET_ACCESS_KEY=x'
+      - 'SQS_ENDPOINT_STRATEGY=standard'
+      - 'LS_LOG=trace'
+    volumes:
+      - './aws:/etc/localstack/init/ready.d/'
+    networks:
+      qa:
+        aliases:
+          - 'test-alias.localstack'
+          - 'sqs.eu-west-1.test-alias.localstack'
+networks:
+  qa:
+    driver: bridge
