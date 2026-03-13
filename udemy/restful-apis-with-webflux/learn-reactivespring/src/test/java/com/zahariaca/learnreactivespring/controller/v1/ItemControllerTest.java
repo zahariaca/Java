@@ -2,6 +2,8 @@ package com.zahariaca.learnreactivespring.controller.v1;
 
 import com.zahariaca.learnreactivespring.document.Item;
 import com.zahariaca.learnreactivespring.repository.ItemReactiveRepository;
+import lombok.Builder;
+import lombok.Data;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 import org.junit.jupiter.api.extension.ExtendWith;
@@ -16,6 +18,8 @@ import reactor.core.publisher.Mono;
 import reactor.test.StepVerifier;
 
 import java.util.List;
+import java.util.function.Function;
+import java.util.stream.Collectors;
 
 import static com.zahariaca.learnreactivespring.constants.ItemConstants.ITEM_END_POINT_V1;
 import static org.junit.jupiter.api.Assertions.assertTrue;
@@ -160,5 +164,30 @@ class ItemControllerTest {
                 .expectStatus().is5xxServerError()
                 .expectBody(String.class)
                 .isEqualTo("RuntimeException occurred");
+    }
+
+    @Data
+    @Builder
+    static class TestObject {
+        int id;
+        String value;
+    }
+
+    @Test
+    void name() {
+        List<TestObject> list = List.of(
+                TestObject.builder()
+                        .id(1)
+                        .value("one")
+                .build(),
+                TestObject.builder()
+                        .id(2)
+                        .value("two")
+                        .build()
+                );
+
+        list.stream()
+                .collect(Collectors.toMap(TestObject::getId, Function.identity()))
+                .forEach((k,v) -> System.out.println("key " + k +" " + v));
     }
 }

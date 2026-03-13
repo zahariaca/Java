@@ -48,5 +48,22 @@ public class Main {
         }*/
                 B b = new B();
         b.test();
+
+        GenericHolder<String> foo = new GenericHolder<>(1l);
+        System.out.println(foo.getObject());
+    }
+    private static class GenericHolder<T> {
+        private T object;
+
+        public GenericHolder(Object object) {
+            this.object = (T) object;
+            System.out.println(getObject());
+        }
+
+        public T getObject() {
+            return object;
+        }
     }
 }
+
+
